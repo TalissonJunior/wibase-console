@@ -1,0 +1,13 @@
+
+:host {
+    .card {
+        cursor: pointer;
+    }
+    
+    .card-hover{
+    
+        &:hover {
+            background-color: #f9fafb;
+        }
+    }
+}

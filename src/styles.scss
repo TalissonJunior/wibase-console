@@ -1,0 +1,19 @@
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Core Styles
+@import 'assets/css/scss/app';
+
+// Font Awesome Icons
+$fa-font-path: "~font-awesome/fonts/";
+@import "~font-awesome/scss/font-awesome.scss";
+
+// Material Design Icons
+$material-design-icons-font-path: "~material-design-icons-iconfont/dist/fonts/";
+@import "~material-design-icons-iconfont/dist/material-design-icons.scss";
+
+// Bootstrap Icons
+@import "~glyphicons-only-bootstrap/css/bootstrap.css";
+
+// Themify Icons
+@import "assets/icons/themify-icons/css/themify-icons.css";
