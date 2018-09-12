@@ -5,7 +5,7 @@
 
 An web application that let you create and configure your Wibase projects.
 
-## Create and manager your projects
+## Create and manager your wibase projects
 <img src="https://github.com/TalissonJunior/wibase-console/blob/master/src/assets/img/github/projects.png" alt="Create and manager your projects">
 
 ### Prerequisites
