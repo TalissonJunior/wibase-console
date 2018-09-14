@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { PaginationModule, TooltipModule, ModalModule, BsDropdownModule, TabsModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
     RoutingModule,
+    HttpClientModule,
     PaginationModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
