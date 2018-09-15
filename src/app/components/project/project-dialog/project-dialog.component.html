@@ -1,0 +1,40 @@
+<div class="modal-header no-border">
+  <h4 id="dialog-static-name" class="modal-title pull-left">Add a new project</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body modal-body-fit">
+  <div class="row">
+
+    <div class="col-5">
+      <div class="form-group">
+        <label for="input-normal">Project name</label>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="col-7">
+      <div class="form-group">
+        <label for="select">Category</label>
+        <ng-select name="category" [items]="selectCategory | async" [multiple]="true" [searchable]="false"
+          bindLabel="label" bindValue="value">
+        </ng-select>
+      </div>
+    </div>
+
+    <div class="col-12 mt-20">
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" checked="">
+        <small class="custom-control-label" >
+            I accept the terms of the Wibase. This is necessary when sharing Analytics data to improve the product and service. <a href="#">know more</a></small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-bold btn-pure btn-secondary" (click)="bsModalRef.hide()">Cancel</button>
+  <button type="button" class="btn btn-bold btn-pure btn-primary">Add</button>
+</div>

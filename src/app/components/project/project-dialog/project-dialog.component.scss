@@ -1,0 +1,11 @@
+:host {
+
+    .custom-control-label {
+        color: #8b95a5;
+        line-height: 15.5px;
+
+        &::after{
+            margin-top: 3px;
+        }
+    }
+}

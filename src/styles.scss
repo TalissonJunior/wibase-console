@@ -4,6 +4,9 @@
 // Core Styles
 @import 'assets/css/scss/app';
 
+// ng-select
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
 // Font Awesome Icons
 $fa-font-path: "~font-awesome/fonts/";
 @import "~font-awesome/scss/font-awesome.scss";

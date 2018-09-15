@@ -10,7 +10,11 @@ export class ProjectService {
   constructor(private http: HttpClient) { }
 
   GetAllProjects() {
-    return this.http.get(environment.apiUrl);
+    return this.http.get(environment.apiUrl + 'project');
   }
-  
+
+  Insert(){
+    
+  }
+
 }
