@@ -22,7 +22,7 @@ export class ProjectComponent implements OnInit {
   }
 
   GetAllProjects() {
-    this._projectService.GetAllProjects().subscribe((data: Array<Project>) => {
+    this._projectService.getAllProjects().subscribe((data: Array<Project>) => {
       this.projects = data;
     }, (error) => {
       // Todo
@@ -31,6 +31,13 @@ export class ProjectComponent implements OnInit {
 
   AddProject() {
     this.bsModalRef = this._bsModalService.show(ProjectDialogComponent, Object.assign({}, { ignoreBackdropClick: true} as ModalOptions));
+
+     // On Modal Close
+     this._bsModalService.onHide.subscribe((data) => {
+      if (this.bsModalRef.content.success) {
+        this.GetAllProjects();
+      }
+    });
   }
 
 }

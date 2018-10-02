@@ -10,7 +10,7 @@ export class CategoryService {
 
   constructor(private http: HttpClient) { }
 
-  GetAllCategories() {
+  getAllCategories() {
     return this.http.get(environment.apiUrl + 'category').pipe(map((data: any) => {
 
       var response: Select[] = [];

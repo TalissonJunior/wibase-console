@@ -1,0 +1,15 @@
+:host {
+
+    &.clear-margin{
+
+        .invalid-feedback {
+            margin-top: 0px;
+        }
+    }
+
+    .invalid-feedback {
+        margin-top: -11px;
+        display: block;
+    }
+
+}
