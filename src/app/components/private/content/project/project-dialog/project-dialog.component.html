@@ -1,5 +1,5 @@
 <div class="modal-header no-border">
-  <h4 id="dialog-static-name" class="modal-title pull-left">Add a new project</h4>
+  <h4 id="dialog-static-name" class="modal-title pull-left">{{ 'PAGE.PROJECT.DIALOG.TITLE' | translate }}</h4>
   <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -12,7 +12,7 @@
 
       <div class="col-5">
         <div class="form-group">
-          <label for="input-normal">Project name</label>
+          <label for="input-normal">{{ 'PAGE.PROJECT.DIALOG.INPUT.LABEL.PROJECT_NAME' | translate }}</label>
           <input type="text" class="form-control" formControlName="name">
         </div>
         <app-message-validator [control]="form.controls.name"></app-message-validator>
@@ -20,7 +20,7 @@
 
       <div class="col-7">
         <div class="form-group">
-          <label for="select">Category</label>
+          <label for="select">{{ 'PAGE.PROJECT.DIALOG.INPUT.LABEL.CATEGORY' | translate }}</label>
           <ng-select name="category" [items]="selectCategory | async" [multiple]="true" [hideSelected]="true" [searchable]="false" bindLabel="label"
             bindValue="value" formControlName="category">
           </ng-select>
@@ -31,9 +31,7 @@
       <div class="col-12 mt-20">
         <div class="custom-control custom-checkbox">
           <input #term type="checkbox" class="custom-control-input" formControlName="terms">
-          <small class="custom-control-label">
-            I accept the terms of the Wibase. This is necessary when sharing Analytics data to improve the product and
-            service. <a href="#">know more</a></small>
+          <small class="custom-control-label">{{ 'PAGE.PROJECT.DIALOG.TERMS' | translate }} <a href="#"> {{ 'PAGE.PROJECT.DIALOG.TERMS_KNOW_MORE' | translate }}</a></small>
         </div>
         <app-message-validator class="clear-margin" [control]="form.controls.terms"></app-message-validator>
       </div>
@@ -44,6 +42,6 @@
 </div>
 
 <div class="modal-footer">
-  <button type="button" class="btn btn-bold btn-pure btn-secondary" (click)="bsModalRef.hide()">Cancel</button>
-  <button type="button" class="btn btn-bold btn-pure btn-primary" [disabled]="form.invalid" (click)="add()">Add</button>
+  <button type="button" class="btn btn-bold btn-pure btn-secondary" (click)="bsModalRef.hide()">{{ 'PAGE.SHARED_DIALOG.BUTTON.CANCEL' | translate }}</button>
+  <button type="button" class="btn btn-bold btn-pure btn-primary" [disabled]="form.invalid" (click)="add()">{{ 'PAGE.SHARED_DIALOG.BUTTON.ADD' | translate }}</button>
 </div>

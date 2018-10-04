@@ -1,0 +1,54 @@
+{
+    "PAGE": {
+        "PROJECT": {
+            "TITLE": "Projetos", 
+            "WELCOME": "Seja bem vindo a Wibase!",
+            "SUMMARY": "Deixe-nos cuidar do backend para você, comece criando um projeto.",
+            "EMPTY_LIST": "Você ainda não tem nenhum projeto.",
+            "TOOLTIP": {
+                "ADD": "Adicionar projeto"
+            },
+            "TAB": {
+                "ALL": "Todos",
+                "WEB": "Web",
+                "ANDROID": "Android",
+                "IOS": "IOS"
+            },
+            "DIALOG": {
+                "TITLE": "Adicionar um novo projeto",
+                "TERMS": "Eu aceito os termos do Wibase. Isso é necessário ao compartilhar dados para melhorar o produto e o serviço.",
+                "TERMS_KNOW_MORE": "saber mais",
+                "INPUT": {
+                    "LABEL": {
+                        "PROJECT_NAME": "Nome do projeto",
+                        "CATEGORY": "Categoria"
+                    }
+                }
+            }
+        },
+        "SHARED_DIALOG": {
+            "BUTTON": {
+                "ADD": "Adicionar",
+                "CANCEL": "Cancelar"
+            }
+        }
+    },
+    "COMPONENT": {
+        "FOOTER": {
+            "ALL_RIGHTS_RESERVED": "Todos os direitos reservados",
+            "DOCUMENTATION": "Documentação",
+            "FAQ": "FAQ",
+            "TERMS_RIGHTS": "Termos e direitos"
+        }
+    },
+    "ERROR": {
+        "REQUIRED": "Campo obrigatório",
+        "INVALID_EMAIL": "Email inválido",
+        "LOGIN_NOT_REGISTERED": "Não há registro de usuário correspondente a este e-mail. O usuário pode ter sido excluído.",
+        "INVALID_PASSWORD": "Senha inválida",
+        "INVALID_MIN_LENGTH": "Campo inválido",
+        "INVALID_DATE": "Data Inválida",
+        "INVALID_PASSWORD_CONFIRM": "A senha não é igual",
+        "LOGIN_IN_USE": "Este email já se encontra em uso"
+    }
+}

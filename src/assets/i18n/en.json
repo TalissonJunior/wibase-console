@@ -1,0 +1,54 @@
+{
+    "PAGE": {
+        "PROJECT": {
+            "TITLE": "Projects",
+            "WELCOME": "Welcome to Wibase!",
+            "SUMMARY": "Let us handle the backend for you, start by creating a project.",
+            "EMPTY_LIST": "You don't have any project yet.",
+            "TOOLTIP": {
+                "ADD": "Add project"
+            },
+            "TAB": {
+                "ALL": "All",
+                "WEB": "Web",
+                "ANDROID": "Android",
+                "IOS": "IOS"
+            },
+            "DIALOG": {
+                "TITLE": "Add a new project",
+                "TERMS": "I accept the terms of the Wibase. This is necessary when sharing data to improve the product and service.",
+                "TERMS_KNOW_MORE": "know more",
+                "INPUT": {
+                    "LABEL": {
+                        "PROJECT_NAME": "Project name",
+                        "CATEGORY": "Category"
+                    }
+                }
+            }
+        },
+        "SHARED_DIALOG": {
+            "BUTTON": {
+                "ADD": "Add",
+                "CANCEL": "Cancel"
+            }
+        }
+    },
+    "COMPONENT": {
+        "FOOTER": {
+            "ALL_RIGHTS_RESERVED": "All rights reserved",
+            "DOCUMENTATION": "Documentation",
+            "FAQ": "FAQ",
+            "TERMS_RIGHTS": "Terms and Rights"
+        }
+    },
+    "ERROR": {
+        "REQUIRED": "Required field",
+        "INVALID_EMAIL": "Invalid email",
+        "LOGIN_NOT_REGISTERED": "There is no user record corresponding to this email. The user may have been deleted.",
+        "INVALID_PASSWORD": "Invalid password",
+        "INVALID_MIN_LENGTH": "Invalid field",
+        "INVALID_DATE": "Invalid date",
+        "INVALID_PASSWORD_CONFIRM": "The password does not match",
+        "LOGIN_IN_USE": "That email is taken. try another one"
+    }
+}

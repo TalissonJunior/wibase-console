@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap';
-import { CategoryService } from '../../../services/category.service';
 import { Observable } from 'rxjs';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Project } from '../../../models/project';
-import { ProjectCategory } from '../../../models/project_category';
-import { ProjectService } from '../../../services/project.service';
+import { CategoryService } from '../../../../../services/category.service';
+import { ProjectService } from '../../../../../services/project.service';
+import { Project } from '../../../../../models/project';
+import { ProjectCategory } from '../../../../../models/project_category';
 
 @Component({
   selector: 'app-project-dialog',

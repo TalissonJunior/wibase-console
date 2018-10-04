@@ -1,17 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { PaginationModule, TooltipModule, ModalModule, BsDropdownModule, TabsModule } from 'ngx-bootstrap';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { PaginationModule, TooltipModule, ModalModule, BsDropdownModule, TabsModule, defineLocale, ptBrLocale } from 'ngx-bootstrap';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { DeviceDetectorModule } from 'ngx-device-detector';
 
 import { AppComponent } from './app.component';
-import { RoutingModule } from './routing.module';
-import { ProjectComponent } from './components/project/project.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { ProjectDialogComponent } from './components/project/project-dialog/project-dialog.component';
 import { MessageValidatorComponent } from './components/utilities/message-validator/message-validator.component';
 import { AdminFormDirective } from './directives/admin-form.directive';
+import { PrivateComponent } from './components/private/private.component';
+import { LoginComponent } from './components/public/login/login.component';
+import { FooterComponent } from './components/private/footer/footer.component';
+import { ProjectComponent } from './components/private/content/project/project.component';
+import { ProjectDialogComponent } from './components/private/content/project/project-dialog/project-dialog.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { ToggleSidebarDirective } from './directives/toggle-sidebar.directive';
+
+defineLocale('pt-br', ptBrLocale); 
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
 
 @NgModule({
   declarations: [
@@ -21,19 +33,31 @@ import { AdminFormDirective } from './directives/admin-form.directive';
     ProjectDialogComponent,
     MessageValidatorComponent,
     AdminFormDirective,
+    LoginComponent,
+    PrivateComponent,
+    FilterPipe,
+    ToggleSidebarDirective
   ],
   imports: [
     BrowserModule,
-    RoutingModule,
     HttpClientModule,
+    AppRoutingModule,
     NgSelectModule, 
     FormsModule,
     ReactiveFormsModule,
+    DeviceDetectorModule.forRoot(),
     PaginationModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   entryComponents: [

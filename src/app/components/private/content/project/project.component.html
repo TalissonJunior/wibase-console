@@ -41,20 +41,20 @@
   <header class="header">
     <div class="header-info">
       <h1 class="header-title">
-        <strong>Welcome to Wibase!</strong>
-        <small>Let us handle the backend services for you, start by creating a project.</small>
+        <strong>{{ 'PAGE.PROJECT.WELCOME' | translate }}</strong>
+        <small>{{ 'PAGE.PROJECT.SUMMARY' | translate }}</small>
       </h1>
     </div>
     
     <div class="header-action">
       <nav class="nav">
-        <a class="nav-link active" href="#">Projects</a>
-        <a class="nav-link" href="#">Web</a>
-        <a class="nav-link" href="#">Android</a>
-        <a class="nav-link" href="#">Ios</a>
+        <a class="nav-link active">{{ 'PAGE.PROJECT.TAB.ALL' | translate }}</a>
+        <a class="nav-link">{{ 'PAGE.PROJECT.TAB.WEB' | translate }}</a>
+        <a class="nav-link">{{ 'PAGE.PROJECT.TAB.ANDROID' | translate }}</a>
+        <a class="nav-link">{{ 'PAGE.PROJECT.TAB.IOS' | translate }}</a>
       </nav>
 
-      <div class="buttons" tooltip="Add Project" placement="left">
+      <div class="buttons" tooltip="{{ 'PAGE.PROJECT.TOOLTIP.ADD' | translate }}" placement="left">
         <div class="fab">
           <button (click)="AddProject()" class="btn btn-float btn-primary" data-toggle="button">
             <i class="fab-icon-default ti-plus"></i>
@@ -80,7 +80,7 @@
       </div>
 
       <div *ngIf="!projects.length">
-        <p class="ml-20 lead fw-400 opacity-60">You don't have any project yet.</p>
+        <p class="ml-20 lead fw-400 opacity-60">{{ 'PAGE.PROJECT.EMPTY_LIST' | translate }}</p>
       </div>
 
     </div>
