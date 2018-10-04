@@ -10,15 +10,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { DeviceDetectorModule } from 'ngx-device-detector';
 
 import { AppComponent } from './app.component';
-import { MessageValidatorComponent } from './components/utilities/message-validator/message-validator.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { ToggleSidebarDirective } from './directives/toggle-sidebar.directive'
 import { AdminFormDirective } from './directives/admin-form.directive';
+import { MessageValidatorComponent } from './components/utilities/message-validator/message-validator.component';
 import { PrivateComponent } from './components/private/private.component';
 import { LoginComponent } from './components/public/login/login.component';
 import { FooterComponent } from './components/private/footer/footer.component';
-import { ProjectComponent } from './components/private/content/project/project.component';
-import { ProjectDialogComponent } from './components/private/content/project/project-dialog/project-dialog.component';
-import { FilterPipe } from './pipes/filter.pipe';
-import { ToggleSidebarDirective } from './directives/toggle-sidebar.directive';
+import { ProjectComponent } from './components/private/project/project.component';
+import { ProjectDialogComponent } from './components/private/project/project-dialog/project-dialog.component';;
 
 defineLocale('pt-br', ptBrLocale); 
 export function HttpLoaderFactory(httpClient: HttpClient) {

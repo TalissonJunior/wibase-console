@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef, BsModalService, ModalOptions } from 'ngx-bootstrap';
 import { ProjectDialogComponent } from './project-dialog/project-dialog.component';
-import { ProjectService } from '../../../../services/project.service';
-import { Project } from '../../../../models/project';
+import { Project } from '../../../models/project';
+import { ProjectService } from '../../../services/project.service';
 
 @Component({
   selector: 'app-project',

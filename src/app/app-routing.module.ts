@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProjectComponent } from './components/private/content/project/project.component';
+import { ProjectComponent } from './components/private/project/project.component';
 import { LoginComponent } from './components/public/login/login.component';
 import { PrivateComponent } from './components/private/private.component';
 import { LoggedInUsersGuard } from './guards/logged-in-users.guard';
