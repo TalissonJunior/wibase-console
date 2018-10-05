@@ -1,5 +1,5 @@
-<div class="modal-header no-border">
-  <h4 id="dialog-static-name" class="modal-title pull-left">{{ 'PAGE.PROJECT.DIALOG.TITLE' | translate }}</h4>
+<div appDialog class="modal-header no-border">
+  <h4 class="modal-title pull-left">{{ 'PAGE.PROJECT.DIALOG.TITLE' | translate }}</h4>
   <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -13,7 +13,7 @@
       <div class="col-5">
         <div class="form-group">
           <label for="input-normal">{{ 'PAGE.PROJECT.DIALOG.INPUT.LABEL.PROJECT_NAME' | translate }}</label>
-          <input type="text" class="form-control" formControlName="name">
+          <input type="text" class="form-control" [class.is-invalid]="isFormFieldInvalid('name')" formControlName="name">
         </div>
         <app-message-validator [control]="form.controls.name"></app-message-validator>
       </div>
@@ -21,7 +21,7 @@
       <div class="col-7">
         <div class="form-group">
           <label for="select">{{ 'PAGE.PROJECT.DIALOG.INPUT.LABEL.CATEGORY' | translate }}</label>
-          <ng-select name="category" [items]="selectCategory | async" [multiple]="true" [hideSelected]="true" [searchable]="false" bindLabel="label"
+          <ng-select name="category" [class.is-invalid]="isFormFieldInvalid('category')" [items]="selectCategory | async" [multiple]="true" [hideSelected]="true" [searchable]="false" bindLabel="label"
             bindValue="value" formControlName="category">
           </ng-select>
         </div>

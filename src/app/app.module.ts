@@ -18,7 +18,8 @@ import { PrivateComponent } from './components/private/private.component';
 import { LoginComponent } from './components/public/login/login.component';
 import { FooterComponent } from './components/private/footer/footer.component';
 import { ProjectComponent } from './components/private/project/project.component';
-import { ProjectDialogComponent } from './components/private/project/project-dialog/project-dialog.component';;
+import { ProjectDialogComponent } from './components/private/project/project-dialog/project-dialog.component';
+import { DialogDirective } from './directives/dialog.directive';
 
 defineLocale('pt-br', ptBrLocale); 
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -36,7 +37,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     LoginComponent,
     PrivateComponent,
     FilterPipe,
-    ToggleSidebarDirective
+    ToggleSidebarDirective,
+    DialogDirective
   ],
   imports: [
     BrowserModule,
