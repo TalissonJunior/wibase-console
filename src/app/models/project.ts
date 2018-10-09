@@ -1,15 +1,11 @@
-import { Category } from "./category";
-
 export class Project {
     id: number;
     name: string;
-    public_id: string;
-    project_categories: Array<Category>;
+    categories_id: Array<string>;
+    create_date: string;
     update_date: string;
-    create_Date: string;
-    readonly $table: string = 'project';
 
     constructor() {
-        this.project_categories = new Array<Category>();
+        this.categories_id = new Array<string>();
     }
 }
